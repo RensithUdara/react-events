@@ -1,73 +1,75 @@
 /* App.css */
 
-/* Styling the buttons */
+/* Styling the primary buttons */
 button {
-  padding: 12px 24px;
-  font-size: 18px;
+  padding: 14px 28px;
+  font-size: 20px;
   margin: 15px;
-  border: 2px solid #6200ea;
-  background-color: #fff;
-  color: #6200ea;
+  border: none;
+  background: linear-gradient(135deg, #6200ea, #bb86fc);
+  color: #ffffff;
   cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
-  font-family: 'Arial', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(98, 0, 234, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Roboto', sans-serif;
 }
 
 button:hover {
-  background-color: #6200ea;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(98, 0, 234, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(98, 0, 234, 0.5);
 }
 
 button:active {
-  background-color: #3700b3;
-  color: #fff;
-  transform: translateY(0);
-  box-shadow: 0 3px 6px rgba(55, 0, 179, 0.3);
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(98, 0, 234, 0.3);
 }
 
-/* Additional styling for custom MyButton component */
+/* Styling for the MyButton component */
 .my-button {
-  padding: 12px 24px;
-  font-size: 18px;
-  border: 2px solid #d32f2f;
-  background-color: #f44336;
-  color: #fff;
+  padding: 14px 28px;
+  font-size: 20px;
+  background: linear-gradient(135deg, #f44336, #e57373);
+  border: none;
+  color: #ffffff;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 12px;
   margin: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.2s;
-  font-family: 'Verdana', sans-serif;
+  box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .my-button:hover {
-  background-color: #b71c1c;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(183, 28, 28, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(244, 67, 54, 0.5);
 }
 
 .my-button:active {
-  background-color: #880e4f;
-  transform: translateY(0);
-  box-shadow: 0 3px 6px rgba(136, 14, 79, 0.3);
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(244, 67, 54, 0.3);
 }
 
-/* Adding subtle animations */
-@keyframes fadeIn {
+/* Adding a subtle gradient background to the page */
+body {
+  background: radial-gradient(circle, rgba(255, 255, 255, 1), rgba(240, 240, 255, 0.7));
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Adding subtle animation for appearance */
+@keyframes slideIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 
 button, .my-button {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: slideIn 0.6s ease-in-out;
 }
