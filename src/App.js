@@ -1,13 +1,23 @@
 import './App.css';
+import MyButton from './MyButton';
 
 function App() {
   const handleClick = () => {
     console.log("Clicked");
-  }
+  };
+
+  const handleMyButtonClick = () => {
+    console.log("My Buton Clicked");
+  };
+
+
 
   return (
     <>
       <button onClick={handleClick}>Click me</button>
+      <br />
+      <br />
+      <MyButton onClick={handleMyButtonClick} />
     </>
 
     // <>
