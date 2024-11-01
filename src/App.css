@@ -1,0 +1,73 @@
+/* App.css */
+
+/* Styling the buttons */
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  margin: 15px;
+  border: 2px solid #6200ea;
+  background-color: #fff;
+  color: #6200ea;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  font-family: 'Arial', sans-serif;
+}
+
+button:hover {
+  background-color: #6200ea;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(98, 0, 234, 0.3);
+}
+
+button:active {
+  background-color: #3700b3;
+  color: #fff;
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(55, 0, 179, 0.3);
+}
+
+/* Additional styling for custom MyButton component */
+.my-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: 2px solid #d32f2f;
+  background-color: #f44336;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  font-family: 'Verdana', sans-serif;
+}
+
+.my-button:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(183, 28, 28, 0.3);
+}
+
+.my-button:active {
+  background-color: #880e4f;
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(136, 14, 79, 0.3);
+}
+
+/* Adding subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+button, .my-button {
+  animation: fadeIn 0.5s ease-in-out;
+}
